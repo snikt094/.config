@@ -38,8 +38,8 @@ keymap:
       Alt-n: alt-key_left
       Alt-C-n: alt-key_right
       Alt-q: C-w
-      Alt-r: C-t 
-      Alt-t: C-r 
+      Alt-w: C-t 
+      Alt-r: C-r 
       ALt-C-q: Shift-C-t
       Alt-o: C-n 
 
@@ -86,15 +86,15 @@ keymap:
       #Window Management 
       Alt-e: [C-b, p] # Previous window
       Alt-C-e: [C-b, n] # Next window
-      Alt-r: [C-b, c] # New window
+      Alt-w: [C-b, c] # New window
       Alt-j: [C-b, Key_Down] # Move down a pane 
       Alt-l: [C-b, Key_Left] # Move left pane
 
       #Pane Management
       Alt-q: C-d   # Close pane
       Alt-t: [C-b, s]
-      Alt-w: [C-b, Shift-Apostrophe]
-      Alt-o: [C-b, Shift-Key_5]
+      Alt-o: [C-b, Shift-Apostrophe]
+      Alt-r: [C-b, Shift-Key_5]
       Alt-Key_Down: [C-b, Alt-key_down]
       Alt-Key_Up: [C-b, Alt-key_Up]
       Alt-Key_Left: [C-b, Alt-key_Left]     

@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.localleader = "\\"
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set('i', "<C-l>", '<c-g>u<Esc>[s1z=`]a<c-g>u') --Correct last mistake
