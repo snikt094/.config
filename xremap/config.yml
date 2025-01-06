@@ -79,15 +79,13 @@ keymap:
     remap:  
       #General
       Alt-h: C-w #Word deletion override
-      Alt-j: C-j #For tmux-nvim-navigator compatibility
-      Alt-l: C-l #For tmux-nvim-navigator compatibility
 
       #Tmux
       #Window Management 
       Alt-e: [C-b, p] # Previous window
       Alt-C-e: [C-b, n] # Next window
       Alt-w: [C-b, c] # New window
-      Alt-j: [C-b, Key_Down] # Move down a pane 
+      Alt-k: [C-b, Key_Down] # Move down a pane 
       Alt-l: [C-b, Key_Left] # Move left pane
 
       #Pane Management
