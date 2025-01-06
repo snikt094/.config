@@ -11,7 +11,7 @@ return {
                 auto_install = true, 
                 highlight = { 
                     enable = true, 
-                    disable = {"latex"}, -- So that vimtex can work for tex files and syntax latex works in md files.
+--                    disable = {"latex"}, -- So that vimtex can work for tex files and syntax latex works in md files.
                 },
 
 
