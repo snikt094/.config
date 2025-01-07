@@ -2,7 +2,7 @@ return {
     {
         "sirver/ultisnips",
         lazy = false,
-        enabled = false, 
+        enabled = true, 
         config = function()
             vim.g.UltiSnipsExpandTrigger = "<tab>"
             vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
