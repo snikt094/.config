@@ -85,7 +85,7 @@ keymap:
       Alt-e: [C-b, p] # Previous window
       Alt-C-e: [C-b, n] # Next window
       Alt-w: [C-b, c] # New window
-      Alt-k: [C-b, Key_Down] # Move down a pane 
+      Alt-k: [C-b, Key_Up] # Move down a pane 
       Alt-l: [C-b, Key_Left] # Move left pane
 
       #Pane Management
