@@ -62,6 +62,7 @@ keymap:
       CapsLock-u: shift-Key_dot 
       CapsLock-h: Key_minus
       CapsLock-z: shift-Key_comma
+      CapsLock-q: shift-Key_grave
   - name: Work Environments 
     remap:
       Alt-y:

@@ -15,6 +15,7 @@ snippet template "Basic template" bA
 \documentclass[a4paper]{article}
 \usepackage{tcolorbox}
 \usepackage{amsmath, amssymb}
+\newtheorem{theorem}{Theorem}
 
 \title{$1} 
 \author{Shawhin Niktash}
@@ -27,10 +28,18 @@ snippet template "Basic template" bA
 \end{document}
 endsnippet
 
-snippet xa "basic question template" bA 
+snippet ajj "basic question template" bA 
 \begin{tcolorbox} [title = Question $1] 
 	$2 
 \end{tcolorbox}
+$0
+endsnippet
+
+snippet ajk "Theorem environment" bA
+\begin{theorem}[${1:Optional Theorem Name}]
+\label{thm:$1}
+	$2
+\end{theorem}
 $0
 endsnippet
 
@@ -854,4 +863,3 @@ snippet DD "D" iA
 \mathbb{D}
 endsnippet
 
-# vim:ft=snippets
