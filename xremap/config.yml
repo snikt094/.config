@@ -100,6 +100,8 @@ keymap:
       Alt-Key_Left: [C-b, Alt-key_Left]     
       Alt-Key_Right: [C-b, Alt-key_Right]
       Alt-i: [C-b, Shift-Semicolon]
+      Alt-n: [C-b, z] 
+      Alt-space: [C-b, space] 
 
   - name: Global
     remap:
