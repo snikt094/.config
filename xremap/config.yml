@@ -45,8 +45,8 @@ keymap:
 
   - name: Symbol Layer
     remap:
-      CapsLock-v: Shift-key_equal
-      CapsLock-n: key_equal
+      CapsLock-g: Shift-key_equal
+      CapsLock-p: key_equal
       CapsLock-i: Shift-key_3
       #CapsLock-e: Shift-key_5
       CapsLock-o: key_0
@@ -59,7 +59,9 @@ keymap:
       CapsLock-j: key_7
       CapsLock-k: key_8
       CapsLock-l: key_9
-
+      CapsLock-u: shift-Key_dot 
+      CapsLock-h: Key_minus
+      CapsLock-z: shift-Key_comma
   - name: Work Environments 
     remap:
       Alt-y:
@@ -71,7 +73,7 @@ keymap:
           Alt-f:
             launch: ["set_workspaces_7_9.sh"]
           Alt-g:
-            launch: ["set_workspaces_10_12.sh"]
+            launch: ["set_workspaces_10_11.sh"]
 
   - name: Terminal
     application: 
