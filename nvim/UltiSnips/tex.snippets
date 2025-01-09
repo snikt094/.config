@@ -35,7 +35,7 @@ snippet template "Basic template" bA
 \end{document}
 endsnippet
 
-snippet ajj "basic question template" bA 
+snippet ques "basic question template" bA 
 \begin{tcolorbox} [title = Question $1] 
 	$2 
 \end{tcolorbox}
@@ -43,7 +43,7 @@ snippet ajj "basic question template" bA
 $0
 endsnippet
 
-snippet ajk "Theorem environment" bA
+snippet theo "Theorem environment" bA
 \begin{theorem}[${1:Optional Theorem Name}]
 \label{thm:$1}
 	$2
@@ -52,7 +52,7 @@ snippet ajk "Theorem environment" bA
 $0
 endsnippet
 
-snippet ajl "Definition environment" bA
+snippet def "Definition environment" bA
 \begin{definition}[${1:Optional }]
 \label{def:$1}
 	$2
@@ -61,7 +61,7 @@ snippet ajl "Definition environment" bA
 $0
 endsnippet
 
-snippet ajo "Remark environment" bA
+snippet remark "Remark environment" bA
 \begin{remark}
 	$1
 \end{remark}
@@ -69,7 +69,7 @@ snippet ajo "Remark environment" bA
 $0
 endsnippet
 
-snippet aji "Example environment" bA
+snippet exam "Example environment" bA
 \begin{example}
 	$1
 \end{example}
@@ -77,7 +77,7 @@ snippet aji "Example environment" bA
 $0
 endsnippet
 
-snippet ajp "Proof environment" bA
+snippet proof "Proof environment" bA
 \begin{proof}
 	$1
 \end{proof}
@@ -85,7 +85,7 @@ snippet ajp "Proof environment" bA
 $0
 endsnippet
 
-snippet ajf "Lemma environment" bA
+snippet lem "Lemma environment" bA
 \begin{lemma}
 	$1
 \end{lemma}
@@ -93,7 +93,7 @@ snippet ajf "Lemma environment" bA
 $0
 endsnippet
 
-snippet ajd "Corollary environment" bA
+snippet cor "Corollary environment" bA
 \begin{corollary}
 	$1
 \end{corollary}
@@ -101,25 +101,31 @@ snippet ajd "Corollary environment" bA
 $0
 endsnippet
 
-snippet sj "Section" bA
+snippet sec "Section" bA
 \section{$1}
 $0
 endsnippet
 
-snippet skj "Subsection" bA
+snippet subsec "Subsection" bA
 \subsection{$1}
 $0
 endsnippet
 
-snippet slkj "subsubsection" bA
+snippet subsubsec "subsubsection" bA
 \subsubsection{$1}
 $0
 endsnippet
 
-snippet it "item" bA
+snippet ajk "item" bA
 \item $1
 $0
 endsnippet
+
+context "math()"
+snippet ci "composition circle" Ai
+\circ $0
+endsnippet
+
 
 #snippet beg "begin{} / end{}" bA
 #\begin{$1} $2
@@ -403,14 +409,19 @@ snippet iff "iff" Ai
 \iff
 endsnippet
 
+#snippet mk "Math" wA
+#$${1}$`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+#	snip.rv = ' '
+#else:
+#	snip.rv = ''
+#`$2
+#endsnippet
+
 snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-	snip.rv = ' '
-else:
-	snip.rv = ''
-`$2
+$$1$ $0
 endsnippet
+
 
 snippet dm "Math" wA
 \[
@@ -529,10 +540,6 @@ snippet () "left( right)" iA
 endsnippet
 
 snippet lr "left( right)" i
-\left( ${1:${VISUAL}} \right) $0
-endsnippet
-
-snippet lr( "left( right)" i
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
 
@@ -749,7 +756,7 @@ snippet dint "integral" wA
 endsnippet
 
 context "math()"
-snippet | "big pipe for integral" iA
+snippet | "big pipe for integral" i
 \Big|_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}$0
 endsnippet
 
@@ -830,7 +837,7 @@ snippet inn "in " iA
 endsnippet
 
 snippet NN "n" iA
-\N
+\mathbb{N}
 endsnippet
 
 snippet Nn "cap" iA
@@ -854,15 +861,23 @@ snippet OO "emptyset" iA
 endsnippet
 
 snippet RR "real" iA
-\R
+\mathbb{R}
 endsnippet
 
 snippet QQ "Q" iA
-\Q
+\mathbb{Q}
 endsnippet
 
 snippet ZZ "Z" iA
-\Z
+\mathbb{Z}
+endsnippet
+
+snippet LL "Lambda" iA
+\Lambda
+endsnippet
+
+snippet Ll "lambda" iA
+\lambda
 endsnippet
 
 snippet <! "normal" iA
