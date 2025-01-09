@@ -17,9 +17,12 @@ snippet template "Basic template" bA
 \usepackage{amsmath, amssymb}
 
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{remark}{Remark}[section]
 \newtheorem{example}{Example}[section]
+\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}
 
 \title{$1} 
 \author{Shawhin Niktash}
@@ -60,7 +63,7 @@ endsnippet
 
 snippet ajo "Remark environment" bA
 \begin{remark}
-	$2
+	$1
 \end{remark}
 
 $0
@@ -68,8 +71,32 @@ endsnippet
 
 snippet aji "Example environment" bA
 \begin{example}
-	$2
+	$1
 \end{example}
+
+$0
+endsnippet
+
+snippet ajp "Proof environment" bA
+\begin{proof}
+	$1
+\end{proof}
+
+$0
+endsnippet
+
+snippet ajf "Lemma environment" bA
+\begin{lemma}
+	$1
+\end{lemma}
+
+$0
+endsnippet
+
+snippet ajd "Corollary environment" bA
+\begin{corollary}
+	$1
+\end{corollary}
 
 $0
 endsnippet
