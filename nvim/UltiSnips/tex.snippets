@@ -121,6 +121,12 @@ snippet ajk "item" bA
 $0
 endsnippet
 
+snippet ajl "New line with \\" Ai
+\\\
+$0
+endsnippet
+
+
 context "math()"
 snippet ci "composition circle" Ai
 \circ $0
@@ -409,19 +415,14 @@ snippet iff "iff" Ai
 \iff
 endsnippet
 
-#snippet mk "Math" wA
-#$${1}$`!p
-#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-#	snip.rv = ' '
-#else:
-#	snip.rv = ''
-#`$2
-#endsnippet
-
 snippet mk "Math" wA
-$$1$ $0
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+	snip.rv = ' '
+else:
+	snip.rv = ''
+`$2
 endsnippet
-
 
 snippet dm "Math" wA
 \[
@@ -603,19 +604,34 @@ snippet sr "^2" iA
 endsnippet
 
 context "math()"
-snippet cb "^3" iA
+snippet se "^3" iA
 ^3
 endsnippet
 
 context "math()"
-snippet td "to the ... power" iA
-^{$1}$0
-endsnippet
-
-context "math()"
-snippet rd "to the ... power" iA
+snippet st "superscript" iA
 ^{($1)}$0
 endsnippet
+
+#context "math()"
+#snippet sr "^2" iA
+#^2
+#endsnippet
+#
+#context "math()"
+#snippet cb "^3" iA
+#^3
+#endsnippet
+#
+#context "math()"
+#snippet td "to the ... power" iA
+#^{$1}$0
+#endsnippet
+#
+#context "math()"
+#snippet rd "to the ... power" iA
+#^{($1)}$0
+#endsnippet
 
 snippet __ "subscript" iA
 _{$1}$0
@@ -636,6 +652,7 @@ endsnippet
 snippet >= "geq" iA
 \ge 
 endsnippet
+
 
 context "math()"
 snippet EE "geq" iA
@@ -818,7 +835,7 @@ snippet set "set" wA
 endsnippet
 
 snippet || "mid" iA
- \mid 
+\mid 
 endsnippet
 
 
@@ -878,6 +895,14 @@ endsnippet
 
 snippet Ll "lambda" iA
 \lambda
+endsnippet
+
+snippet SS "Sigma" iA
+\Sigma
+endsnippet
+
+snippet Ss "sigma" iA
+\sigma
 endsnippet
 
 snippet <! "normal" iA

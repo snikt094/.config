@@ -63,6 +63,8 @@ keymap:
       CapsLock-h: Key_minus
       CapsLock-z: shift-Key_comma
       CapsLock-q: shift-Key_grave
+      #For latex &=
+      shift-CapsLock-p: [shift-key_7, key_equal]
   - name: Work Environments 
     remap:
       Alt-y:
@@ -103,6 +105,8 @@ keymap:
       Alt-i: [C-b, Shift-Semicolon]
       Alt-n: [C-b, z] 
       Alt-space: [C-b, space] 
+
+
 
   - name: Global
     remap:
