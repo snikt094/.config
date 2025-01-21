@@ -44,7 +44,7 @@ $0
 endsnippet
 
 snippet theo "Theorem environment" bA
-\begin{theorem}[${1:Optional Theorem Name}]
+\begin{theorem}[$1]
 \label{thm:$1}
 	$2
 \end{theorem}
@@ -53,7 +53,7 @@ $0
 endsnippet
 
 snippet def "Definition environment" bA
-\begin{definition}[${1:Optional }]
+\begin{definition}[$1]
 \label{def:$1}
 	$2
 \end{definition}
@@ -70,8 +70,8 @@ $0
 endsnippet
 
 snippet exam "Example environment" bA
-\begin{example}
-	$1
+\begin{example} $1\\\
+	$2
 \end{example}
 
 $0
@@ -81,6 +81,14 @@ snippet proof "Proof environment" bA
 \begin{proof}
 	$1
 \end{proof}
+
+$0
+endsnippet
+
+snippet group "Group" bA
+\begin{group*}
+	$1
+\end{group*}
 
 $0
 endsnippet
@@ -121,9 +129,8 @@ snippet ajk "item" bA
 $0
 endsnippet
 
-snippet ajl "New line with \\" Aw 
-\\\
-$0
+snippet ajl "New line with \\" Ai
+\\\ $0
 endsnippet
 
 
@@ -355,6 +362,14 @@ snippet beg "begin{} / end{}" bA
 $0
 endsnippet
 
+snippet gather "begin{gather*} / end{gather*}" bA
+\begin{gather*}
+	$1
+\end{gather*}
+
+$0
+endsnippet
+
 priority 100
 snippet ... "ldots" iA
 \ldots
@@ -403,16 +418,16 @@ snippet pac "Package" b
 endsnippet
 
 snippet => "implies" Ai
-\implies
+\implies $0  
 endsnippet
 
 snippet =< "implied by" Ai
-\impliedby
+\impliedby $0
 endsnippet
 
 context "math()"
 snippet iff "iff" Ai
-\iff
+\iff $0
 endsnippet
 
 snippet mk "Math" wA
@@ -511,6 +526,7 @@ endsnippet
 
 snippet == "equals" iA
 &= $1 \\\\
+$0
 endsnippet
 
 snippet != "equals" iA
@@ -542,6 +558,15 @@ endsnippet
 
 snippet lr "left( right)" i
 \left( ${1:${VISUAL}} \right) $0
+endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+	snip.rv = ' '
+else:
+	snip.rv = ''
+`$2
 endsnippet
 
 snippet lr| "left| right|" i
@@ -598,40 +623,40 @@ snippet sq "\sqrt{}" iA
 \sqrt{${1:${VISUAL}}} $0
 endsnippet
 
-context "math()"
-snippet sr "^2" iA
-^2
-endsnippet
-
-context "math()"
-snippet se "^3" iA
-^3
-endsnippet
-
-context "math()"
-snippet st "superscript" iA
-^{($1)}$0
-endsnippet
-
 #context "math()"
 #snippet sr "^2" iA
 #^2
 #endsnippet
 #
 #context "math()"
-#snippet cb "^3" iA
+#snippet se "^3" iA
 #^3
 #endsnippet
 #
 #context "math()"
-#snippet td "to the ... power" iA
-#^{$1}$0
-#endsnippet
-#
-#context "math()"
-#snippet rd "to the ... power" iA
+#snippet st "superscript" iA
 #^{($1)}$0
 #endsnippet
+
+context "math()"
+snippet sr "^2" iA
+^2
+endsnippet
+
+context "math()"
+snippet cb "^3" iA
+^3
+endsnippet
+
+context "math()"
+snippet td "to the ... power" iA
+^{$1}$0
+endsnippet
+
+context "math()"
+snippet rd "to the ... power" iA
+^{($1)}$0
+endsnippet
 
 snippet __ "subscript" iA
 _{$1}$0
@@ -813,7 +838,7 @@ endsnippet
 
 context "math()"
 snippet \\\ "setminus" iA
-\setminus
+\setminus $0
 endsnippet
 
 snippet >> ">>" iA
@@ -982,4 +1007,25 @@ endsnippet
 snippet DD "D" iA
 \mathbb{D}
 endsnippet
+
+context "math()"
+snippet kst "Kleene star" iA
+^{*}$0
+endsnippet
+
+context "math()"
+snippet kpl "Kleene plus" iA
+^{+}$0
+endsnippet
+
+context "math()"
+snippet abs "left| right|" wA 
+\left| ${1:${VISUAL}} \right| $0
+endsnippet
+
+context "math()"
+snippet equiv "equivalent" iA
+\equiv $0
+endsnippet
+
 
