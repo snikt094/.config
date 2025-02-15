@@ -20,9 +20,11 @@ return {
 
       require('telescope').load_extension('fzf')
 
-      vim.keymap.set("n", "<space>fs", require('telescope.builtin').help_tags)
-      vim.keymap.set("n", "<space>fd", require('telescope.builtin').find_files)
-      vim.keymap.set("n", "<space>fa", function()
+      vim.keymap.set("n", "<space>oh", require('telescope.builtin').help_tags)
+      vim.keymap.set("n", "<space>of", require('telescope.builtin').find_files)
+
+
+      vim.keymap.set("n", "<space>oc", function()
         require('telescope.builtin').find_files {
           cwd = vim.fn.stdpath("config")
         }
