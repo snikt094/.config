@@ -551,41 +551,23 @@ snippet bmat "bmat" iA
 \begin{bmatrix} $1 \end{bmatrix} $0
 endsnippet
 
-context "math()"
-snippet () "left( right)" iA
+snippet lrs "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
 
-snippet lr "left( right)" i
-\left( ${1:${VISUAL}} \right) $0
-endsnippet
-
-snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-	snip.rv = ' '
-else:
-	snip.rv = ''
-`$2
-endsnippet
-
-snippet lr| "left| right|" i
+snippet lr| "left| right|" iA
 \left| ${1:${VISUAL}} \right| $0
 endsnippet
 
-snippet lr{ "left\{ right\}" i
+snippet lra "left\{ right\}" iA
 \left\\{ ${1:${VISUAL}} \right\\} $0
 endsnippet
 
-snippet lrb "left\{ right\}" i
-\left\\{ ${1:${VISUAL}} \right\\} $0
-endsnippet
-
-snippet lr[ "left[ right]" i
+snippet lrj "left[ right]" iA
 \left[ ${1:${VISUAL}} \right] $0
 endsnippet
 
-snippet lra "leftangle rightangle" iA
+snippet lrk "leftangle rightangle" iA
 \left<${1:${VISUAL}} \right>$0
 endsnippet
 
@@ -894,6 +876,10 @@ snippet uuu "bigcup" iA
 \bigcup_{${1:i \in ${2: I}}} $0
 endsnippet
 
+snippet uua "bigcup range" iA
+\bigcup_{i=$1}^{$2} $0
+endsnippet
+
 snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}} $0
 endsnippet
@@ -912,6 +898,14 @@ endsnippet
 
 snippet ZZ "Z" iA
 \mathbb{Z}
+endsnippet
+
+snippet OO "Omega" iA
+\Omega
+endsnippet
+
+snippet Oo "omega" iA
+\omega
 endsnippet
 
 snippet LL "Lambda" iA
@@ -985,6 +979,18 @@ endsnippet
 
 priority 10
 context "math()"
+snippet "tilde" "tilde" riA
+\tilde{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])tilde" "tilde" riA
+\tilde{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
 snippet "hat" "hat" riA
 \hat{$1}$0
 endsnippet
@@ -998,6 +1004,7 @@ endsnippet
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
 endsnippet
+
 
 
 snippet HH "H" iA
@@ -1032,6 +1039,5 @@ context "math()"
 snippet con "congruant" iA
 \equiv $1 \pmod{${2:n}} $0
 endsnippet
-
 
 
