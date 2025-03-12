@@ -1,28 +1,61 @@
-snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
-snip.rv = ' '
-else:
-snip.rv = ''
+snippet ' "''" iA
+'${1:${VISUAL}}'`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+	snip.rv=' '
 `$2
 endsnippet
 
-snippet lrs "()" wA
-(${1:${VISUAL:Some default text}}) $0
+snippet " "" iA
+"${1:${VISUAL}}"`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+	snip.rv=' '
+`$2"
 endsnippet
 
-snippet lr| "||" wA
-|${1:${VISUAL}}| $0
+snippet ( "()" iA
+(${1:${VISUAL}})`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+	snip.rv=' '
+`$2
 endsnippet
 
-snippet lra "{}" wA
-{${1:${VISUAL}}} $0
+#snippet lr| "||" iA
+#|${1:${VISUAL}}|`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';']:
+#	snip.rv=' '
+#`$2
+#endsnippet
+
+snippet { "{}" iA
+{${1:${VISUAL}}}`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+	snip.rv=' '
+`$2
 endsnippet
 
-snippet lrj "[]" wA
-[${1:${VISUAL}}] $0
+snippet [ "[]" iA
+[${1:${VISUAL}}]`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+	snip.rv=' '
+`$2
 endsnippet
 
-snippet lrk "<>" wA
-<${1:${VISUAL}}>$0
+#snippet lrk "<>" iA
+#
+#<${1:${VISUAL}}>`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';']:
+#	snip.rv=' '
+#`$2
+#endsnippet
+
+snippet enum "enumerate" w
+enumerate`!p
+if t[1] and t[1][0] not in [',', '.', '?', '-', ' ', ';', ':', '(']:
+	snip.rv=' '
+`$1
 endsnippet
+
+snippet st "such that" w  
+such that $0 
+endsnippet
+

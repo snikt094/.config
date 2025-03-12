@@ -26,6 +26,7 @@ modmap:
         alone: tab
 
       Alt_l: Win_l
+
       
 keymap:
   - name: Chrome
@@ -45,10 +46,11 @@ keymap:
 
   - name: Symbol Layer
     remap:
+      #Cannot map x, n, y 
       CapsLock-g: Shift-key_equal
       CapsLock-p: key_equal
       CapsLock-i: Shift-key_3
-      #CapsLock-e: Shift-key_5
+      #CapsLock-e: Shift-key_5 
       CapsLock-o: key_0
       CapsLock-a: key_1
       CapsLock-s: key_2
@@ -63,7 +65,8 @@ keymap:
       CapsLock-h: Key_minus
       CapsLock-z: shift-Key_comma
       CapsLock-q: shift-Key_grave
-      CapsLock-x: shift-key_7
+      CapsLock-v: shift-key_1
+      #CapsLock-x: shift-key_7 &
 
 
   - name: Work Environments 
