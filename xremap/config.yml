@@ -47,27 +47,32 @@ keymap:
   - name: Symbol Layer
     remap:
       #Cannot map x, n, y 
-      CapsLock-g: Shift-key_equal
-      CapsLock-p: key_equal
-      CapsLock-i: Shift-key_3
-      #CapsLock-e: Shift-key_5 
-      CapsLock-o: key_0
-      CapsLock-a: key_1
-      CapsLock-s: key_2
-      CapsLock-d: key_3
-      CapsLock-f: key_4
-      CapsLock-w: key_5
-      CapsLock-e: key_6
-      CapsLock-j: key_7
-      CapsLock-k: key_8
-      CapsLock-l: key_9
-      CapsLock-u: shift-Key_dot 
-      CapsLock-h: Key_minus
-      CapsLock-z: shift-Key_comma
-      CapsLock-q: shift-Key_grave
-      CapsLock-v: shift-key_1
-      #CapsLock-x: shift-key_7 &
-
+      CapsLock-g: Shift-key_equal #+
+      CapsLock-p: key_equal #=
+      CapsLock-i: Shift-key_3 ##
+      #CapsLock-e: Shift-key_5 #%
+      CapsLock-o: key_0 #0
+      CapsLock-a: key_1 #1
+      CapsLock-s: key_2 #2
+      CapsLock-d: key_3 #3
+      CapsLock-f: key_4 #4
+      CapsLock-w: key_5 #5
+      CapsLock-e: key_6 #6
+      CapsLock-j: key_7 #7
+      CapsLock-k: key_8 #8
+      CapsLock-l: key_9 #9
+      CapsLock-u: shift-key_dot #>
+      CapsLock-h: Key_minus #-
+      CapsLock-z: shift-key_comma #<
+      CapsLock-v: shift-key_1 #!
+      #CapsLock-x: shift-key_7 #&
+      CapsLock-r: shift-key_leftbrace #{
+      CapsLock-n: shift-key_rightbrace #}
+      CapsLock-t: key_leftbrace #[
+      CapsLock-m: key_rightbrace #]
+      CapsLock-q: shift-key_9 #(
+      CapsLock-c: shift-key_0 #)
+      Shift-CapsLock-d: shift-key_grave #~
 
   - name: Work Environments 
     remap:

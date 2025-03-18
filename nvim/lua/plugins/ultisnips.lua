@@ -4,7 +4,7 @@ return {
         lazy = false,
         enabled = true, 
         config = function()
-            vim.g.UltiSnipsExpandTrigger = "<tab>"
+            vim.g.UltiSnipsExpandTrigger = "<space>"
             vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
             vim.g.UltiSnipsJumpBackwardTrigger = "<c-s>"
             vim.g.UltisnipsSnippetStorageDirectoryForUltiSnipsEdit = "~/.config/nvim/UltiSnips"

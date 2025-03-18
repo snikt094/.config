@@ -9,7 +9,11 @@ return {
                 ensure_installed = {"c", "vim", "vimdoc", "query", "lua", "python", "r", "markdown", "markdown_inline", "rnoweb", "yaml", "html", "latex", "bash", "java"},  
                 sync_install = false,
                 auto_install = true, 
-                indent = false,
+                indent = {
+                    enable = true,
+                    disable = {"latex"}, -- So that vimtex can work for tex files and syntax latex works in md files.
+                },
+
                 highlight = { 
                     enable = true, 
                     disable = {"latex"}, -- So that vimtex can work for tex files and syntax latex works in md files.

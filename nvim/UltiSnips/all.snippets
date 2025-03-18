@@ -1,53 +1,58 @@
-snippet ' "''" iA
-'${1:${VISUAL}}'`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
-	snip.rv=' '
-`$2
-endsnippet
-
-snippet " "" iA
-"${1:${VISUAL}}"`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
-	snip.rv=' '
-`$2"
-endsnippet
+#snippet ' "''" iA
+#'${1:${VISUAL}}'`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+#	snip.rv=' '
+#`$2
+#endsnippet
+#
+#snippet " "" iA
+#"${1:${VISUAL}}"`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+#	snip.rv=' '
+#`$2"
+#endsnippet
+#
 
 snippet ( "()" iA
-(${1:${VISUAL}})`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
-	snip.rv=' '
-`$2
+(${1:${VISUAL}})$0
 endsnippet
 
-#snippet lr| "||" iA
-#|${1:${VISUAL}}|`!p
-#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';']:
+#snippet ( "()" iA
+#(${1:${VISUAL}})`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
 #	snip.rv=' '
 #`$2
 #endsnippet
 
-snippet { "{}" iA
-{${1:${VISUAL}}}`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
-	snip.rv=' '
-`$2
-endsnippet
-
-snippet [ "[]" iA
-[${1:${VISUAL}}]`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
-	snip.rv=' '
-`$2
-endsnippet
-
-#snippet lrk "<>" iA
+##snippet lr| "||" iA
+##|${1:${VISUAL}}|`!p
+##if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';']:
+##	snip.rv=' '
+##`$2
+##endsnippet
 #
-#<${1:${VISUAL}}>`!p
-#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';']:
+#snippet { "{}" iA
+#{${1:${VISUAL}}}`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
 #	snip.rv=' '
 #`$2
 #endsnippet
-
+#
+#snippet [ "[]" iA
+#[${1:${VISUAL}}]`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+#	snip.rv=' '
+#`$2
+#endsnippet
+#
+##snippet lrk "<>" iA
+##
+##<${1:${VISUAL}}>`!p
+##if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';']:
+##	snip.rv=' '
+##`$2
+##endsnippet
+#
 snippet enum "enumerate" w
 enumerate`!p
 if t[1] and t[1][0] not in [',', '.', '?', '-', ' ', ';', ':', '(']:
