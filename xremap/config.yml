@@ -5,9 +5,9 @@ modmap:
   - name: Global
     remap: 
       Semicolon: 
-        held: leftctrl 
+        held: leftctrl
         alone: enter
-        alone_time_out_millies: 100     
+        alone_time_out_millies: 100
 
       Enter: semicolon
 
@@ -19,7 +19,7 @@ modmap:
       LeftShift: 
         held: leftshift
         alone: tab
-        alone_time_out_millies: 100     
+        alone_time_out_millies: 100
 
       Alt_R: 
         held: CapsLock
@@ -42,7 +42,6 @@ keymap:
       Alt-w: C-t 
       Alt-r: C-r 
       ALt-C-q: Shift-C-t
-      Alt-o: C-n 
       Alt-o: C-n 
       C-tab: shift-tab #Backward tab selection
       C-d: C-g #Downward select in f-search
@@ -74,9 +73,10 @@ keymap:
       CapsLock-n: shift-key_rightbrace #}
       CapsLock-t: key_leftbrace #[
       CapsLock-m: key_rightbrace #]
-      CapsLock-q: shift-key_9 #(
-      CapsLock-c: shift-key_0 #)
-      Shift-CapsLock-d: shift-key_grave #~
+      #CapsLock-t: shift-key_9 #(
+      #CapsLock-m: shift-key_0 #)
+      #Shift-CapsLock-d: shift-key_grave #~
+      CapsLock-q: shift-key_grave #~
 
   - name: Work Environments 
     remap:
