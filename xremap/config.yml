@@ -43,6 +43,10 @@ keymap:
       Alt-r: C-r 
       ALt-C-q: Shift-C-t
       Alt-o: C-n 
+      Alt-o: C-n 
+      C-tab: shift-tab #Backward tab selection
+      C-d: C-g #Downward select in f-search
+      C-k: C-Shift-g #Upward select in f-search
 
   - name: Symbol Layer
     remap:
