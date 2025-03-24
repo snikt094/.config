@@ -8,8 +8,13 @@ vim.keymap.set("n", "<leader>s", vim.cmd.w) --Save file
 vim.keymap.set("n", "<leader>a", vim.cmd.wq) --Save and quite file 
 vim.keymap.set("n", "<leader>q", vim.cmd.q) --Quite
 
-vim.keymap.set("v", "h", "^") --Start of line
-vim.keymap.set("v", "l", "$") --End of line
+--vim.keymap.set("v", "h", "^") --Start of line
+--vim.keymap.set("v", "l", "$") --End of line
+
+vim.keymap.set("v", "(", ")")
+vim.keymap.set("v", ")", "(")
+vim.keymap.set("n", "(", ")")
+vim.keymap.set("n", ")", "(")
 
 -- Move highlighted text 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

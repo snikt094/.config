@@ -9,6 +9,7 @@ if status is-interactive
     alias odn="cd (find ~ -type d | fzf) && nvim ." # Open a directory in nvim
     alias of="nvim (find . -type f | fzf -m)" # Open files
     #    alias ofu="nvim (find ~/Documents/university -type f | fzf -m)" # Open a university files
+    alias mvd="mv (find ~/Downloads -type f | fzf -m) ." # Move file to current directory from Downloads
 
     abbr -a fd --position anywhere "(find ~ -type d -not -path '*/.*' |fzf)" # Find a Directory 
     abbr -a ff --position anywhere "(find ~ -type f -not -path '*/.*' |fzf -m)" # Find a file 

@@ -14,8 +14,7 @@ endglobal
 snippet template "Basic template" bA 
 \documentclass[a4paper]{article}
 \usepackage{tcolorbox}
-\usepackage{amssymb}
-\usepackage{amsmath, amsthm}
+\usepackage{amssymb, amsmath, amsthm}
 
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{lemma}{Lemma}
@@ -24,10 +23,12 @@ snippet template "Basic template" bA
 \newtheorem*{definition}{Definition}
 
 \newenvironment{remark}{\paragraph{Remark:}}{}      
+\newenvironment{recall}{\paragraph{Recall: }}{}      
+\newenvironment{case}{\paragraph{Case:}}{}      
 \newenvironment{example}{\paragraph{Example:}}{}    
 \newenvironment{claim}{\paragraph{Claim:}}{}        
 \newenvironment{scratch}{\paragraph{Scratch Work:}}{} 
-\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}
+\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}      
 
 \title{$1} 
 \author{Shawhin Niktash}
@@ -82,6 +83,13 @@ snippet sratch "sracth environment" bA
 $0
 endsnippet
 
+snippet recall "recall environment" bA
+\begin{recall} 
+	$1
+\end{recall}
+$0
+endsnippet
+
 snippet remark "remark environment" bA
 \begin{remark} 
 	$1
@@ -115,6 +123,10 @@ snippet lemma "Lemma environment" bA
 	$1
 \end{lemma}
 $0
+endsnippet
+
+snippet case "case" bA
+\textbf{Case $1:} $0
 endsnippet
 
 snippet cor "Corollary environment" bA
@@ -562,6 +574,7 @@ snippet xx "cross" iA
 endsnippet
 
 priority 100
+context "math()"
 snippet ** "cdot" iA
 \cdot 
 endsnippet
@@ -688,52 +701,63 @@ snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}} $0
 endsnippet
 
-snippet OO "emptyset" iA
-\O
+snippet emptyset "emptyset" iA
+\O $0
 endsnippet
 
 snippet RR "real" iA
-\mathbb{R}
+\mathbb{R} $0
 endsnippet
 
 snippet QQ "Q" iA
-\mathbb{Q}
+\mathbb{Q} $0
 endsnippet
 
 snippet ZZ "Z" iA
-\mathbb{Z}
+\mathbb{Z} $0
 endsnippet
 
 snippet OO "Omega" iA
-\Omega
+\Omega $0
 endsnippet
 
 snippet Oo "omega" iA
-\omega
+\omega $0  
 endsnippet
 
+snippet Bb "beta" iA
+\beta $0
+endsnippet
+
+snippet Aa "alpha" iA
+\alpha $0
+endsnippet
 snippet LL "Lambda" iA
 \Lambda
 endsnippet
 
+snippet Pp "partial" iA
+\partial $0
+endsnippet
+
 snippet Dd "delta" iA
-\delta
+\delta $0
 endsnippet
 
 snippet Ll "lambda" iA
-\lambda
+\lambda $0
 endsnippet
 
 snippet Ee "epsilon" iA
-\epsilon
+\epsilon $0
 endsnippet
 
 snippet SS "Sigma" iA
-\Sigma
+\Sigma $0
 endsnippet
 
 snippet Ss "sigma" iA
-\sigma
+\sigma $0
 endsnippet
 
 snippet <! "normal" iA
@@ -741,7 +765,7 @@ snippet <! "normal" iA
 endsnippet
 
 snippet <> "hokje" iA
-\diamond 
+\diamond $0
 endsnippet
 
 
@@ -752,7 +776,7 @@ endsnippet
 
 context "math()"
 snippet tt "text" iA
-\text{$1}$0
+\text{ $1}$0
 endsnippet
 
 context "math()"

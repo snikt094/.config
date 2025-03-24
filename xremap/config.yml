@@ -1,6 +1,5 @@
 virtual_modifiers:
-  - CapsLock
-
+  - CapsLock 
 modmap:           
   - name: Global
     remap: 
@@ -26,7 +25,6 @@ modmap:
         alone: tab
 
       Alt_l: Win_l
-
       
 keymap:
   - name: Chrome
@@ -45,7 +43,7 @@ keymap:
       Alt-o: C-n 
       C-tab: shift-tab #Backward tab selection
       C-d: C-g #Downward select in f-search
-      C-k: C-Shift-g #Upward select in f-search
+      C-u: C-Shift-g #Upward select in f-search
 
   - name: Symbol Layer
     remap:
@@ -68,15 +66,18 @@ keymap:
       CapsLock-h: Key_minus #-
       CapsLock-z: shift-key_comma #<
       CapsLock-v: shift-key_1 #!
+      CapsLock-q: shift-key_grave #~
       #CapsLock-x: shift-key_7 #&
-      CapsLock-r: shift-key_leftbrace #{
-      CapsLock-n: shift-key_rightbrace #}
-      CapsLock-t: key_leftbrace #[
-      CapsLock-m: key_rightbrace #]
+      #CapsLock-n: shift-key_leftbrace #{
+      #CapsLock-r: shift-key_rightbrace #}
+      #CapsLock-m: key_leftbrace #[
+      #CapsLock-t: key_rightbrace #]
       #CapsLock-t: shift-key_9 #(
       #CapsLock-m: shift-key_0 #)
       #Shift-CapsLock-d: shift-key_grave #~
-      CapsLock-q: shift-key_grave #~
+      
+
+
 
   - name: Work Environments 
     remap:
