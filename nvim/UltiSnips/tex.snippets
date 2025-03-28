@@ -161,7 +161,7 @@ snippet ajl "New line with \\" Ai
 endsnippet
 
 context "math()"
-snippet ci "composition circle" Ai
+snippet cir "composition circle" Ai
 \circ $0
 endsnippet
 
@@ -356,6 +356,16 @@ endsnippet
 
 snippet bmat "bmat" iA
 \begin{bmatrix} $1 \end{bmatrix} $0
+endsnippet
+
+context "math()"
+snippet bp "[)" iA
+[$1) $0
+endsnippet
+
+context "math()"
+snippet pb "(]" iA
+($1] $0
 endsnippet
 
 snippet lrs "left( right)" iA
@@ -685,7 +695,7 @@ snippet Nn "cap" iA
 \cap 
 endsnippet
 
-snippet UU "cup" iA
+snippet Uu "cup" iA
 \cup 
 endsnippet
 
@@ -841,8 +851,6 @@ snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
 endsnippet
 
-
-
 snippet HH "H" iA
 \mathbb{H}
 endsnippet
@@ -879,3 +887,4 @@ endsnippet
 snippet bf "boldface" iA
 \textbf{${1:${VISUAL}}} $0
 endsnippet
+

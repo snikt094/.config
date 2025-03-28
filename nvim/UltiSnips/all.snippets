@@ -21,7 +21,7 @@ snippet '' "''" iA
 '${1:${VISUAL}}'
 endsnippet
 
-snippet "" "" iA
+snippet " "" iA
 "${1:${VISUAL}}"
 endsnippet
 
@@ -31,6 +31,10 @@ endsnippet
 
 snippet [ "[]" iA
 [${1:${VISUAL}}]
+endsnippet
+
+snippet << "<>" iA
+<${1:${VISUAL}}>
 endsnippet
 
 snippet ( "()" iA
@@ -78,6 +82,10 @@ enumerate`!p
 if t[1] and t[1][0] not in [',', '.', '?', '-', ' ', ';', ':', '(']:
 	snip.rv=' '
 `$1
+endsnippet
+
+snippet cts "continuous" w  
+continuous$0 
 endsnippet
 
 snippet st "such that" w  

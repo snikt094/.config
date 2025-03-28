@@ -1,0 +1,134 @@
+ 
+virtual_modifiers:
+  - CapsLock
+
+modmap:           
+  - name: Global
+    remap: 
+
+      Enter: 
+        held: leftctrl 
+        alone: Enter
+        alone_time_out_millies: 100     
+
+      CapsLock: 
+        held: leftalt
+        alone: esc
+        alone_time_out_millies: 100
+  
+      LeftShift: 
+        held: leftshift
+        alone: tab
+        alone_time_out_millies: 100     
+
+      Alt_R: 
+        held: CapsLock
+        alone: tab
+
+keymap:
+  - name: Chrome
+    application: 
+      only: Google-chrome
+    remap:
+      Alt-e: Shift-C-tab #Switch to left tab 
+      Alt-Ctrl-e: C-tab #Switch to right tab
+      Alt-l: C-l 
+      Alt-n: alt-key_left
+      Alt-C-n: alt-key_right
+      Alt-q: C-w
+      Alt-w: C-t 
+      Alt-r: C-r 
+      ALt-C-q: Shift-C-t
+      Alt-o: C-n 
+      Alt-o: C-n 
+      C-tab: shift-tab #Backward tab selection
+      C-d: C-g #Downward select in f-search
+      C-u: C-Shift-g #Upward select in f-search
+
+  - name: Symbol Layer
+    remap:
+      #Cannot map x, n, y 
+      CapsLock-g: Shift-key_equal #+
+      CapsLock-p: key_equal #=
+      CapsLock-i: Shift-key_3 ##
+      #CapsLock-e: Shift-key_5 #%
+      CapsLock-o: key_0 #0
+      CapsLock-a: key_1 #1
+      CapsLock-s: key_2 #2
+      CapsLock-d: key_3 #3
+      CapsLock-f: key_4 #4
+      CapsLock-w: key_5 #5
+      CapsLock-e: key_6 #6
+      CapsLock-j: key_7 #7
+      CapsLock-k: key_8 #8
+      CapsLock-l: key_9 #9
+      CapsLock-u: shift-key_dot #>
+      CapsLock-h: Key_minus #-
+      CapsLock-z: shift-key_comma #<
+      CapsLock-v: shift-key_1 #!
+      #CapsLock-x: shift-key_7 #&
+      #CapsLock-r: shift-key_leftbrace #{
+      #CapsLock-n: shift-key_rightbrace #}
+      CapsLock-r: key_leftbrace #[
+      CapsLock-n: key_rightbrace #]
+      CapsLock-q: shift-key_9 #(
+      CapsLock-c: shift-key_0 #)
+      Shift-CapsLock-d: shift-key_grave #~
+      CapsLock-t: 
+
+  - name: Work Environments 
+    remap:
+      Alt-y:
+        remap:
+          Alt-s:
+            launch: ["set_workspaces_1_3.sh"]
+          Alt-d:
+            launch: ["set_workspaces_4_6.sh"]
+          Alt-f:
+            launch: ["set_workspaces_7_9.sh"]
+          Alt-g:
+            launch: ["set_workspaces_10_11.sh"]
+
+  - name: Terminal
+    application: 
+      only: Gnome-terminal
+    remap:  
+      #General
+      Alt-h: C-w #Word deletion override
+
+      #Tmux
+      #Window Management 
+      Alt-e: [C-b, p] # Previous window
+      Alt-C-e: [C-b, n] # Next window
+      Alt-w: [C-b, c] # New window
+      Alt-k: [C-b, Key_Up] # Move down a pane 
+      Alt-l: [C-b, Key_Left] # Move left pane
+
+      #Pane Management
+      Alt-q: C-d   # Close pane
+      Alt-t: [C-b, s]
+      Alt-o: [C-b, Shift-Apostrophe]
+      Alt-r: [C-b, Shift-Key_5]
+      Alt-Key_Down: [C-b, Alt-key_down]
+      Alt-Key_Up: [C-b, Alt-key_Up]
+      Alt-Key_Left: [C-b, Alt-key_Left]     
+      Alt-Key_Right: [C-b, Alt-key_Right]
+      Alt-i: [C-b, Shift-Semicolon]
+      Alt-n: [C-b, z] 
+      Alt-space: [C-b, space] 
+
+
+
+  - name: Global
+    remap:
+      #Generic mappings
+      Shift-enter: shift-semicolon
+
+      #Deletion
+      Alt-enter: backspace
+      CapsLock-C-enter: backspace #For symbol layer compatibility
+      C-Alt-h: [backspace, backspace]
+      CapsLock-C-Alt-h: [backspace, backspace] #For symbol layer compatibility
+      Alt-h: C-backspace
+      CapsLock-Alt-h: C-backspace #For symbol layer compatibility
+
