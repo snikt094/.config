@@ -67,6 +67,7 @@ keymap:
       CapsLock-z: shift-key_comma #<
       CapsLock-v: shift-key_1 #!
       CapsLock-q: shift-key_grave #~
+      #CapsLock-n: shift-Semicolon 
       #CapsLock-x: shift-key_7 #&
       #CapsLock-n: shift-key_leftbrace #{
       #CapsLock-r: shift-key_rightbrace #}
@@ -75,9 +76,6 @@ keymap:
       #CapsLock-t: shift-key_9 #(
       #CapsLock-m: shift-key_0 #)
       #Shift-CapsLock-d: shift-key_grave #~
-      
-
-
 
   - name: Work Environments 
     remap:

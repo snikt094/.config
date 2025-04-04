@@ -11,7 +11,9 @@ set incremental-search true
 #map k scroll half-up
 map d navigate next
 map e navigate previous
-map <C-u> rotate
+map v scroll half-down
+map w scroll half-up
+
 #map ^d
 #map r half-up
 #map w half-down

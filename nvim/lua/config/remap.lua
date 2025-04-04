@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 vim.g.localleader = "\\"
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ou", vim.cmd.UltiSnipsEdit)
 
 vim.keymap.set('i', "<C-l>", '<c-g>u<Esc>[s1z=`]a<c-g>u') --Correct last mistake
  
@@ -11,10 +13,10 @@ vim.keymap.set("n", "<leader>q", vim.cmd.q) --Quite
 --vim.keymap.set("v", "h", "^") --Start of line
 --vim.keymap.set("v", "l", "$") --End of line
 
-vim.keymap.set("v", "(", ")")
-vim.keymap.set("v", ")", "(")
-vim.keymap.set("n", "(", ")")
-vim.keymap.set("n", ")", "(")
+--vim.keymap.set("v", "(", ")")
+--vim.keymap.set("v", ")", "(")
+--vim.keymap.set("n", "(", ")")
+--vim.keymap.set("n", ")", "(")
 
 -- Move highlighted text 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

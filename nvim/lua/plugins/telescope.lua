@@ -12,8 +12,15 @@ return {
 --            local actions = require("telescope.actions") don't need this for mappings can just use function as string for default actions (written in the docs)  
             require('telescope').setup {
                 defaults = {
-                        mappings = {    
-                            i = {
+                        mappings = {     
+                        n = {
+                            --["<C-v>"] = actions.select_vertical, Both of these open the window either vertically to the right or horizontally under 
+                            --["<C-d>"] = actions.select_horizontal,
+                            ["<C-j>"] = "move_selection_next",
+                            ["<C-k>"] = "move_selection_previous"
+                        }, 
+   
+                        i = {
                             --["<C-v>"] = actions.select_vertical, Both of these open the window either vertically to the right or horizontally under 
                             --["<C-d>"] = actions.select_horizontal,
                             ["<C-j>"] = "move_selection_next",
@@ -45,11 +52,13 @@ return {
                     cwd = vim.fn.stdpath("config")
                 }
             end)
-            vim.keymap.set("n", "<space>fk", function()
+
+            vim.keymap.set("n", "<space>ol", function()
                 require('telescope.builtin').find_files {
                     cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy")
                 }
             end)
+
             require "config.telescope.multigrep".setup()
         end
     }
