@@ -9,15 +9,15 @@ modmap:
         alone_time_out_millies: 100
 
       Enter: semicolon
-
+      
       CapsLock: 
-        held: leftalt
+        held: Alt_L
         alone: esc
         alone_time_out_millies: 100
   
-      LeftShift: 
-        held: leftshift
-        alone: tab
+      Shift_L: 
+        held: Shift_L
+        alone: Tab
         alone_time_out_millies: 100
 
       Alt_R: 
@@ -25,6 +25,7 @@ modmap:
         alone: tab
 
       Alt_l: Win_l
+
       
 keymap:
   - name: Chrome
@@ -118,15 +119,13 @@ keymap:
       Alt-n: [C-b, z] 
       Alt-space: [C-b, space] 
 
-
-
   - name: Global
     remap:
       #Generic mappings
       Shift-enter: shift-semicolon
 
       #Deletion
-      Alt-enter: backspace
+      Alt_L-enter: backspace
       CapsLock-C-enter: backspace #For symbol layer compatibility
       C-Alt-h: [backspace, backspace]
       CapsLock-C-Alt-h: [backspace, backspace] #For symbol layer compatibility

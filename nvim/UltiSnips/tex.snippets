@@ -98,7 +98,7 @@ $0
 endsnippet
 
 snippet example "Example environment" bA
-\begin{example} 
+\begin{example}
 	$1
 \end{example}
 $0
@@ -393,8 +393,9 @@ snippet conj "conjugate" iA
 \overline{$1}$0
 endsnippet
 
+context "math()"
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{${1:n}=${2:1}}^{${3:\infty}} ${4:a_n z^n}
 endsnippet
 
 snippet taylor "taylor" w
@@ -490,7 +491,7 @@ endsnippet
 
 context "math()"
 snippet seq "sequence" iA
-(a_{n})_{n=${2:1}}^${3:\infty} $0
+(${1:a}_{n})_{n=${2:1}}^${3:\infty} $0
 endsnippet
 
 context "math()"
@@ -890,5 +891,20 @@ endsnippet
 
 snippet bf "boldface" iA
 \textbf{${1:${VISUAL}}} $0
+endsnippet
+
+context "math()"
+snippet fsx "f_{...}(x)" i
+f_{${1:n}}${2:(x)}$0
+endsnippet
+
+context "math()"
+snippet fs "f_{...}" i
+f_${1:n}$0
+endsnippet
+
+context "math()"
+snippet fx "f(x)" iA
+f(x)$0
 endsnippet
 

@@ -14,7 +14,13 @@ if status is-interactive
     #    alias ofu="nvim (find ~/Documents/university -type f | fzf -m)" # Open a university files
     alias mvd="mv (find ~/Downloads -type f | fzf -m) ." # Move file to current directory from Downloads
 
-    abbr -a md --position command "mkdir"
+    abbr -a md --position command "mkdir" # "mkdir"
+    abbr -a d --position command "clear" # "clear"
+    abbr -a k --position command "cd" # "cd"
+    abbr -a - --position command "cd -" # "cd -"
+    abbr -a s --position command "source" # "source"
+    abbr -a n --position command "nvim" # "nvim"
+    abbr -a o --position command "nvim ." # "nvim ."
 
     abbr -a fd --position anywhere "(find ~ -type d -not -path '*/.*' |fzf)" # Find a Directory 
     abbr -a ff --position anywhere "(find ~ -type f -not -path '*/.*' |fzf -m)" # Find a file 
@@ -25,4 +31,6 @@ if status is-interactive
     abbr -a ocf --position command "cd ~/.config/fish && nvim config.fish" # Open fish config.fish in nvim  
     abbr -a ocz --position command "cd ~/.config/zathura && nvim zathurarc" # Open zathura zathurarc in nvim  
     abbr -a ocx --position command "cd ~/.config/xremap && nvim config.yml" # Open xremap config in nvim
+
+    abbr -a sfc --position command "source ~/.config/fish/config.fish" # Source fish config
 end
