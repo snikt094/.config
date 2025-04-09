@@ -23,7 +23,8 @@ if status is-interactive
     abbr -a md --position command "mkdir" # "mkdir"
     abbr -a d --position command "clear" # "clear"
     abbr -a k --position command "cd" # "cd"
-    abbr -a - --position command "cd -" # "cd -"
+    abbr -a j --position command "cd -" # "cd -"
+    #abbr -a l --position command "cd ../" # "cd .."
     abbr -a s --position command "source" # "source"
     abbr -a n --position command "nvim" # "nvim"
 
@@ -37,6 +38,8 @@ if status is-interactive
 
     abbr -a ocn --position command "cd ~/.config/nvim && nvim ." # Open nvim config directory in nvim
     abbr -a con --position command "cd ~/.config/nvim && nvim ." # Open nvim config directory in nvim
+    abbr -a oct --position command "cd ~/.config/tmux && nvim tmux.conf" # Open tmux config in nvim   
+    abbr -a cot --position command "cd ~/.config/tmux && nvim tmux.conf" # Open tmux config in nvim   
     abbr -a ocf --position command "cd ~/.config/fish && nvim config.fish" # Open fish config.fish in nvim  
     abbr -a cof --position command "cd ~/.config/fish && nvim config.fish" # Open fish config.fish in nvim  
     abbr -a ocz --position command "cd ~/.config/zathura && nvim zathurarc" # Open zathura zathurarc in nvim  

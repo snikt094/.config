@@ -6,26 +6,26 @@ modmap:
       Semicolon: 
         held: leftctrl
         alone: enter
-        alone_time_out_millies: 100
+        alone_time_out_millies: 25
 
       Enter: semicolon
       
       CapsLock: 
         held: Alt_L
         alone: esc
-        alone_time_out_millies: 100
+        alone_time_out_millies: 25
   
       Shift_L: 
         held: Shift_L
         alone: Tab
-        alone_time_out_millies: 100
+        alone_time_out_millies: 25
 
       Alt_R: 
         held: CapsLock
-        alone: tab
+        alone: backslash
+        alone_time_out_millies: 0
 
       Alt_l: Win_l
-
       
 keymap:
   - name: Chrome
@@ -41,10 +41,12 @@ keymap:
       Alt-w: C-t 
       Alt-r: C-r 
       ALt-C-q: Shift-C-t
-      Alt-o: C-n 
-      C-tab: shift-tab #Backward tab selection
+      Alt-o: C-n
+      C-tab: shift-tab #Backwar; tab selection  
       C-d: C-g #Downward select in f-search
       C-u: C-Shift-g #Upward select in f-search
+      CapsLock-C-d: C-Key_3 #To allow changing tabs by numbers
+      CapsLock-C-e: C-Key_6 #To allow changing tabs by numbers
 
   - name: Symbol Layer
     remap:
@@ -68,6 +70,8 @@ keymap:
       CapsLock-z: shift-key_comma #<
       CapsLock-v: shift-key_1 #!
       CapsLock-q: shift-key_grave #~
+      #CapsLock-b: shift-key_2 #@
+
       #CapsLock-n: shift-Semicolon 
       #CapsLock-x: shift-key_7 #&
       #CapsLock-n: shift-key_leftbrace #{
@@ -130,5 +134,4 @@ keymap:
       C-Alt-h: [backspace, backspace]
       CapsLock-C-Alt-h: [backspace, backspace] #For symbol layer compatibility
       Alt-h: C-backspace
-      CapsLock-Alt-h: C-backspace #For symbol layer compatibility
-
+      CapsLock-Alt-h: C-backspace #For symbol layer compatibility 
